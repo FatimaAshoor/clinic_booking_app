@@ -27,14 +27,14 @@ class _CustomTextFieldState extends State<CustomTextField> {
     return SafeArea(
       child: Container(
         decoration: BoxDecoration(
-          color: colors['lightGray'],
+          color: AppColors.lightGray,
           borderRadius: BorderRadius.circular(30),
         ),
         child: TextFormField(
           obscureText: _obscureText,
           decoration: InputDecoration(
             prefixIcon: Icon(widget.icon),
-            prefixIconColor: colors['darkGray'],
+            prefixIconColor: AppColors.darkGray,
             contentPadding: const EdgeInsets.only(left: 10, top: 10),
             border: InputBorder.none,
             hintText: widget.hintText,

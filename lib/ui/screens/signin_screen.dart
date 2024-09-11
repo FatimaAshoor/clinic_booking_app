@@ -12,7 +12,7 @@ class SigninScreen extends StatelessWidget {
     double height = 40;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: colors['blue'],
+        backgroundColor: AppColors.blue,
       ),
       body: Center(
         child: ConstrainedBox(

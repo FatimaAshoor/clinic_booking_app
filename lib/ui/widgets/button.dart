@@ -12,11 +12,11 @@ class ButtonWidget extends StatelessWidget {
           onPressed: () {},
           style: ElevatedButton.styleFrom(
             padding: const EdgeInsets.symmetric(vertical: 20),
-            backgroundColor: colors['blue'],
+            backgroundColor: AppColors.blue,
           ),
           child: Text(
             text,
-            style: TextStyle(color: colors['white']),
+            style: TextStyle(color: AppColors.white),
           ),
         ),
       ),

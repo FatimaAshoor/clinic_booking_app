@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 
-// هنا الوان المشروع تقدر تستخدمها عن طريق انك تستدعي الماب وبعدها تكتب القيمة
-
-const Map<String, Color> colors = {
-  'blue': Color.fromRGBO(0, 100, 247, 1),
-  'white': Color.fromRGBO(255, 255, 255, 1),
-  'lightGray': Color.fromRGBO(246, 247, 249, 1),
-  'darkGray': Color.fromRGBO(151, 151, 151, 1),
-  'black': Color.fromRGBO(21, 21, 21, 1),
-};
+class AppColors {
+  static const Color blue = Color(0xFF0064F7); 
+  static const Color white = Color(0xFFFFFFFF); 
+  static const Color lightGray = Color(0xFFF6F7F9); 
+  static const Color darkGray = Color(0xFF979797); 
+  static const Color black = Color(0xFF151515);
+}
