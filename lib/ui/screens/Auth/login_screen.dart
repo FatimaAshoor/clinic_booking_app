@@ -34,7 +34,7 @@ class LoginScreen extends StatelessWidget {
               ),
               CustomTextField(
                 icon: Icons.key,
-                hintText: 'Password',
+                hintText: 'Enter Your Password',
                 hintColor: AppColors.darkGray,
                 isSecure: true,
               ),

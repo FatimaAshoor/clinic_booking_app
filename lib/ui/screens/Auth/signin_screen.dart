@@ -64,7 +64,7 @@ class SignInScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Text('Don\'t have an account?', style: TextStyle(fontSize: 16),),
+                  const Text('Already have an account?', style: TextStyle(fontSize: 16),),
                   CustomButton(
                     textColor: AppColors.black,
                     onPressed: () {
