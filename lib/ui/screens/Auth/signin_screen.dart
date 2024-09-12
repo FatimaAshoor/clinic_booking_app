@@ -11,7 +11,7 @@ class SignInScreen extends StatelessWidget {
     double height = 40;
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Login", style: TextStyle(fontWeight: FontWeight.bold),),
+        title: const Text("Sign in", style: TextStyle(fontWeight: FontWeight.bold),),
         centerTitle: true,
       ),
       body: Center(
@@ -22,18 +22,28 @@ class SignInScreen extends StatelessWidget {
           child: ListView(
             children: [
               const SizedBox(
+                height: 40,
+              ),
+              CustomTextField(
+                icon: Icons.person_outline_rounded,
+                hintText: 'Enter Your Name',
+                hintColor: AppColors.darkGray,
+              ),
+              const SizedBox(
                 height: 20,
               ),
               CustomTextField(
-                icon: Icons.person,
-                hintText: 'User Name',
+                icon: Icons.email_outlined,
+                hintText: 'Enter Your Email',
+                hintColor: AppColors.darkGray,
               ),
               const SizedBox(
                 height: 20,
               ),
               CustomTextField(
                 icon: Icons.key,
-                hintText: 'Password',
+                hintText: 'Enter Your Password',
+                hintColor: AppColors.darkGray,
                 isSecure: true,
               ),
               SizedBox(
@@ -42,15 +52,10 @@ class SignInScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 14),
                 child: CustomButton(
-                  // عند استدعاء الكلاس نقوم بتمرير المتغيرات كالتالي
-                  text: 'Login', //النص الذي سوف يظهر على الزر
+                  text: 'Sign in',
                   onPressed: () {
-                    //الاكشن الذي سوف يقوم به الزر
-                    //هنا يتم اضافة الاكشن المحدد عند الضغط على الزر
-                    //مثل استدعاء دالة الانتقالة لصفحة وهكذا
                   },
-                  buttonType: ButtonType.elevated,//نوع الزر الذي تريدونه تستدعونه بهذه الطريقة
-                  //هناك المزيد من الميزات يمكنكم التعديل عليها كما تريدون
+                  buttonType: ButtonType.elevated,
                 ),
               ),
               const SizedBox(
@@ -62,8 +67,10 @@ class SignInScreen extends StatelessWidget {
                   const Text('Don\'t have an account?', style: TextStyle(fontSize: 16),),
                   CustomButton(
                     textColor: AppColors.black,
-                    onPressed: () {},
-                    text: 'Register',
+                    onPressed: () {
+                      Navigator.of(context).pushNamed("login");
+                    },
+                    text: 'Login',
                     buttonType: ButtonType.text,
                   ),
                 ],

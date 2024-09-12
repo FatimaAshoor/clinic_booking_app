@@ -4,8 +4,9 @@ class CustomTextField extends StatefulWidget {
   // Change the State to State Full Widget to Handle the Situation if the Text 
   //Field is Password show Eye Icon to Hide or show the Password
   CustomTextField(
-      {super.key, required this.hintText, required this.icon, this.isSecure});
+      {super.key, required this.hintText, required this.icon, this.isSecure, required this.hintColor});
   final String hintText;
+  final Color hintColor;
   final IconData icon;
   bool? isSecure = false;
 
@@ -39,6 +40,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
             contentPadding: const EdgeInsets.only(left: 10, top: 10),
             border: InputBorder.none,
             hintText: widget.hintText,
+            hintStyle: TextStyle(color: widget.hintColor),
             suffixIcon: widget.isSecure == true
                 ? IconButton(
                     icon: Icon(

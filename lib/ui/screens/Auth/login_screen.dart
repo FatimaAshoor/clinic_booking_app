@@ -22,11 +22,12 @@ class LoginScreen extends StatelessWidget {
           child: ListView(
             children: [
               const SizedBox(
-                height: 20,
+                height: 40,
               ),
               CustomTextField(
-                icon: Icons.person,
-                hintText: 'User Name',
+                icon: Icons.email_outlined,
+                hintText: 'Enter Your Email',
+                hintColor: AppColors.darkGray,
               ),
               const SizedBox(
                 height: 20,
@@ -34,6 +35,7 @@ class LoginScreen extends StatelessWidget {
               CustomTextField(
                 icon: Icons.key,
                 hintText: 'Password',
+                hintColor: AppColors.darkGray,
                 isSecure: true,
               ),
               SizedBox(
@@ -62,7 +64,9 @@ class LoginScreen extends StatelessWidget {
                   const Text('Don\'t have an account?', style: TextStyle(fontSize: 16),),
                   CustomButton(
                     textColor: AppColors.black,
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).pushNamed("signin");
+                    },
                     text: 'Register',
                     buttonType: ButtonType.text,
                   ),
