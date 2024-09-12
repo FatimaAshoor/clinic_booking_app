@@ -1,4 +1,4 @@
-import 'package:clinic_booking_app/ui/screens/signin_screen.dart';
+import 'package:clinic_booking_app/ui/screens/Auth/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
@@ -20,6 +20,6 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: SigninScreen());
+        home: LoginScreen());
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../constants/colors.dart';
 // قمنا بانشاء  كلاس للازار قاب لاعادة الاستخدام بحيث عند استدعاءه في الواجهة تكتب نوع الزر وبعد ذلك تستطيع التحكم في كل الخصائص 
 
 enum ButtonType { text, elevated, outlined, icon }
@@ -18,10 +19,10 @@ class CustomButton extends StatelessWidget {
     Key? key,
     required this.text,
     required this.onPressed,
-    this.textColor = Colors.white,
-    this.backgroundColor = Colors.blue,
+    this.textColor = AppColors.white,
+    this.backgroundColor = AppColors.blue,
     this.padding = const EdgeInsets.symmetric(vertical: 12.0, horizontal: 24.0),
-    this.borderRadius = 8.0,
+    this.borderRadius = 60,
     this.borderSide = BorderSide.none,
     this.buttonType = ButtonType.text,
     this.icon,
@@ -34,9 +35,7 @@ class CustomButton extends StatelessWidget {
         return 
           TextButton(
             onPressed: onPressed,
-           
-            child: Text(text,style: TextStyle(fontSize: 14),),
-          
+            child: Text(text, style: const TextStyle(color: AppColors.blue, fontSize: 16),),
         );
 
       case ButtonType.elevated:
@@ -49,7 +48,10 @@ class CustomButton extends StatelessWidget {
               side: borderSide,
             ),
           ),
-          child: Text(text),
+          child: Padding(
+            padding: const EdgeInsets.all(8),
+            child: Text(text,style: const TextStyle(fontSize: 20),),
+          ),
         );
 
       case ButtonType.outlined:
@@ -85,7 +87,7 @@ class CustomButton extends StatelessWidget {
               side: borderSide,
             ),
           ),
-          child: Text(text),
+          child: Text(text, style: const TextStyle(fontSize: 16),),
         );
     }
   }

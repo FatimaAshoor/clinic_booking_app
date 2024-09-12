@@ -26,6 +26,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Container(
+        padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
           color: AppColors.lightGray,
           borderRadius: BorderRadius.circular(30),
@@ -34,7 +35,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
           obscureText: _obscureText,
           decoration: InputDecoration(
             prefixIcon: Icon(widget.icon),
-            prefixIconColor: AppColors.darkGray,
+            prefixIconColor: AppColors.blue,
             contentPadding: const EdgeInsets.only(left: 10, top: 10),
             border: InputBorder.none,
             hintText: widget.hintText,
