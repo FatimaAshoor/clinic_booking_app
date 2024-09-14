@@ -17,7 +17,11 @@ class _HomePageAdminState extends State<HomePageAdmin> {
         centerTitle: true,
       ),
       body: SingleChildScrollView(
-
+        child: Column(
+          children:[
+            Row(),
+          ]
+        )
       ),
     );
   }
