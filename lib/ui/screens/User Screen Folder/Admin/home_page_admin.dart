@@ -1,4 +1,3 @@
-import 'package:clinic_booking_app/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 class HomePageAdmin extends StatefulWidget {
