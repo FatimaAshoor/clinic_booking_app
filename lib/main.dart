@@ -1,5 +1,6 @@
 import 'package:clinic_booking_app/ui/screens/Auth/login_screen.dart';
 import 'package:clinic_booking_app/ui/screens/Auth/signin_screen.dart';
+import 'package:clinic_booking_app/ui/screens/User%20Screen%20Folder/Admin/home_page_admin.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
@@ -26,6 +27,7 @@ class MainApp extends StatelessWidget {
       routes: {
           "login" : (context)=> LoginScreen(),
         "signin" : (context)=> SignInScreen(),
+        "adminHome" : (context)=> HomePageAdmin(),
       },
 
     );
