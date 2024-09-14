@@ -1,15 +1,16 @@
 import 'package:clinic_booking_app/constants/colors.dart';
 import 'package:flutter/material.dart';
+
+
 class CustomTextField extends StatefulWidget {
-  // Change the State to State Full Widget to Handle the Situation if the Text 
-  //Field is Password show Eye Icon to Hide or show the Password
-  CustomTextField(
-      {super.key, required this.hintText, required this.icon, this.isSecure, required this.hintColor});
+  String? Function(String?)? validator;
   final String hintText;
   final Color hintColor;
   final IconData icon;
   bool? isSecure = false;
 
+  CustomTextField({super.key, this.validator, required this.hintText, required this.icon, this.isSecure, required this.hintColor});
+  
   @override
   _CustomTextFieldState createState() => _CustomTextFieldState();
 }
@@ -33,6 +34,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
           borderRadius: BorderRadius.circular(30),
         ),
         child: TextFormField(
+          validator: widget.validator,
           obscureText: _obscureText,
           decoration: InputDecoration(
             prefixIcon: Icon(widget.icon),
